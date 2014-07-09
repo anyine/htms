@@ -1,0 +1,70 @@
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.backgroundimg {
+	height: 100%;
+	width: 100%;
+	border: 0;
+}
+
+.iconPanel {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+}
+
+.icon {
+	background-repeat: no-repeat;
+	background-position: top;
+	font-size: 14px;
+	text-align: center;
+	font-weight: 5px;
+	height: 80px;
+	width: 80px;
+	margin: 27;
+}
+
+.icon_hover {
+	background-repeat: no-repeat;
+	border: solid px #bbd6ec;
+	border-radius: 3px;
+	box-shadow: 0 0 10px #06C;
+	cursor: hand;
+}
+
+.reduceDiv {
+	height: 100%;
+	width: 100%;
+}
+
+.reduceItem {
+	float: left;
+	margin:5px;
+	height: 300px;
+	width: 400px;
+	border:2px;
+	opacity:0.3;
+	border: solid 1px #bbd6ec;
+	box-shadow: 0 0 10px #06C;
+}
+
+.reduceItem:hover {
+	background-repeat: no-repeat;
+	border: solid 2px #bbd6ec;
+	border-radius: 3px;
+	box-shadow: 0 0 30px #06C;
+	cursor: hand;
+	opacity:1;
+}
+
+.iconImg {
+	margin:10px;
+	height: 30px;
+	width: 30px;
+}

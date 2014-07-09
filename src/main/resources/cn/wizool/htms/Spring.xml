@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<bean id="cn.wizool.htms.common.DataAccessManager" class="cn.wizool.htms.iwebutil.newlay.DataAccessManager">
+		<property name="dataAccessObjects">
+			<map>
+				<entry key="UserDao">
+					<bean class="cn.wizool.htms.dao.impl.UserDaoImpl"
+						parent="AbstractDao" />
+				</entry>
+				<entry key="ActivityDao">
+					<bean class="cn.wizool.htms.dao.impl.ActivityDaoImpl"
+						parent="AbstractDao" />
+				</entry>
+				<entry key="ForeignDao">
+					<bean class="cn.wizool.htms.dao.impl.ForeignDaoImpl"
+						parent="AbstractDao" />
+				</entry>
+				<entry key="VisitDao">
+					<bean class="cn.wizool.htms.dao.impl.VisitDaoImpl"
+						parent="AbstractDao" />
+				</entry>
+				<entry key="StatisticsDao">
+					<bean class="cn.wizool.htms.dao.impl.StatisticsDaoImpl"
+						parent="AbstractDao" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="cn.wizool.htms.common.ServiceManager" class="cn.wizool.htms.iwebutil.newlay.ServiceManager">
+		<property name="serviceProxyBeans">
+			<map>
+				<entry key="UserService">
+					<bean parent="transactionProxyFactoryBean">
+						<property name="target">
+							<bean class="cn.wizool.htms.service.impl.UserServiceImpl"
+								parent="AbstractService" />
+						</property>
+					</bean>
+				</entry>
+				<entry key="ActivityService">
+					<bean parent="transactionProxyFactoryBean">
+						<property name="target">
+							<bean class="cn.wizool.htms.service.impl.ActivityServiceImpl"
+								parent="AbstractService" />
+						</property>
+					</bean>
+				</entry>
+				<entry key="ForeignService">
+					<bean parent="transactionProxyFactoryBean">
+						<property name="target">
+							<bean class="cn.wizool.htms.service.impl.ForeignServiceImpl"
+								parent="AbstractService" />
+						</property>
+					</bean>
+				</entry>
+				<entry key="VisitService">
+					<bean parent="transactionProxyFactoryBean">
+						<property name="target">
+							<bean class="cn.wizool.htms.service.impl.VisitServiceImpl"
+								parent="AbstractService" />
+						</property>
+					</bean>
+				</entry>
+				<entry key="StatisticsService">
+					<bean parent="transactionProxyFactoryBean">
+						<property name="target">
+							<bean class="cn.wizool.htms.service.impl.StatisticsServiceImpl"
+								parent="AbstractService" />
+						</property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

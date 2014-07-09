@@ -1,0 +1,43 @@
+.create {
+	background-image: url(../images/icons/create.png) !important;
+}
+
+.modify {
+	background-image: url(../images/icons/modify.png) !important;
+}
+
+.delete {
+	background-image: url(../images/icons/delete.png) !important;
+}
+
+.query {
+	background-image: url(../images/icons/query.png) !important;
+}
+
+.view {
+	background-image: url(../images/icons/view.png) !important;
+}
+
+.user {
+	background-image: url(../images/icons/user.png) !important;
+}
+
+.download {
+	background-image: url(../images/icons/download.png) !important;
+}
+
+.exit {
+	background-image: url(../images/icons/exit.png) !important;
+}
+
+.refresh {
+	background-image: url(../images/icons/refresh.png) !important;
+}
+
+.print {
+	background-image: url(../images/icons/print.png) !important;
+}
+
+.test1 {
+	background-image: url(../images/icons/text1.png) !important;
+}
